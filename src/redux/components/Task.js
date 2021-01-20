@@ -1,6 +1,5 @@
 import React, {useState} from "react"
-import {changeMainPageAction, deleteTask, deleteTaskAction, editTaskAction, sortTasks} from "../actions/appAction";
-import {loginAction} from "../actions/userAction";
+import { deleteTaskAction, editTaskAction} from "../actions/appAction";
 import {Dropdown} from "react-bootstrap";
 import {connect} from "react-redux";
 import Collapse from "react-bootstrap/Collapse";

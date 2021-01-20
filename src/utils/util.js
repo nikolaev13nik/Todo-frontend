@@ -5,12 +5,11 @@ return "Basic "+base64;
 }
 
 export function upgradeDateForSort(tasks) {
-    tasks.map(task => {
+    tasks.forEach(task => {
         let timestampCreated = new Date(task.createdDate).getTime() / 1000;
         let timestampModified = new Date(task.modifiedDate).getTime() / 1000;
         task.createdTime = timestampCreated;
         task.modifiedTime = timestampModified;
-
     })
     return tasks;
 };
