@@ -106,7 +106,7 @@ export function addTaskAction(task) {
             let login = getState().user.user.login
             const response = await fetch(URI_ADD_TASK + login, settings)
             if (!response.ok) {
-                alert("error" + " " + response.status + " " + response.message)
+                alert("error add task action" )
                 return
             }
             const array = await response.json();

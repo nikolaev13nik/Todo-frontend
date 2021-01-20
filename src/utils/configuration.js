@@ -9,7 +9,7 @@
 
 export const URI_LOGIN="https://app-todo-tasks-backend.herokuapp.com/account/login"
 export const URI_NEW_USER="https://app-todo-tasks-backend.herokuapp.com/account/user"
-export const URI_DELETE_TASK="https://app-todo-tasks-backend.herokuapp.com/"
+export const URI_DELETE_TASK="https://app-todo-tasks-backend.herokuapp.com/task/"
 export const URI_EDIT_TASK="https://app-todo-tasks-backend.herokuapp.com/task/update/"
 export const URI_ADD_TASK="https://app-todo-tasks-backend.herokuapp.com/task/"
 export const URI_REMOVE_ALL_TASKS="https://app-todo-tasks-backend.herokuapp.com/task/clear/tasks/"

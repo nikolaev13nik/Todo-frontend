@@ -32,7 +32,6 @@ const Task = (props) => {
 
     let isDone = props.task.isDone ? "Done" : props.task.isDone
 
-    console.log(props.task.isDone)
     return (<>
             <tr>
                 <td>
