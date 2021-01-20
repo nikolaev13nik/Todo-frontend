@@ -11,12 +11,9 @@ import {store} from "./redux";
 
 ReactDOM.render(
     <Provider store={store}>
-        <React.StrictMode>
             <div>
                 <App />
             </div>
-
-        </React.StrictMode>
     </Provider>
     ,
     document.getElementById('root')

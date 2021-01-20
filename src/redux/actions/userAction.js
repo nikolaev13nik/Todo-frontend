@@ -9,13 +9,11 @@ export function saveUserToStoreAction(user) {
     return {
         type: SAVE_USER,
         payload: user
-
     }
 }
 
 
 export function loginAction(userForFetch) {
-
     return async dispatch => {
         try {
             const settings = {
@@ -27,21 +25,17 @@ export function loginAction(userForFetch) {
             }
             const response = await fetch(URI_LOGIN, settings)
             if (!response.ok) {
-                alert("Your password is not correct")
+                alert("Your password or login is not correct")
                 dispatch(changeMainPageAction(""))
                 return
             }
             const user = await response.json()
             user.password = userForFetch.password
-
-            let tasks=upgradeDateForSort(user.tasks);
+            let tasks = upgradeDateForSort(user.tasks);
             tasks.sort((a, b) => a.createdTime - b.createdTime);
-
             dispatch(saveUserToStoreAction(user))
             dispatch(saveTasksAction(tasks))
             dispatch(changeMainPageAction("toDoList"))
-
-
         } catch (e) {
             // ------------------------- TO DO---LOGGER--------------------
             console.log("catch in loginAction", e.message)
@@ -70,9 +64,13 @@ export function addUserAction(newUser) {
                 dispatch(changeMainPageAction(""))
                 return
             }
-            let addedUser = await response.json();
+            const user = await response.json()
+            user.password = newUser.password
+            let tasks = upgradeDateForSort(user.tasks);
+            tasks.sort((a, b) => a.createdTime - b.createdTime);
+            dispatch(saveUserToStoreAction(user))
+            dispatch(saveTasksAction(tasks))
             dispatch(changeMainPageAction("toDoList"))
-            console.log(addedUser)
         } catch (e) {
             // ------------------------- TO DO-----------------------
             console.log("catch addUserAction", e.message)

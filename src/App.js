@@ -3,7 +3,6 @@ import Header from "./redux/components/Header";
 import Main from "./redux/components/Main";
 
 
-
 function App() {
   return (
     <div>

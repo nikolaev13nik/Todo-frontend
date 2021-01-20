@@ -5,20 +5,14 @@ import {connect} from "react-redux";
 
 const WelcomePage = (props) => {
 
-
-    return (<div className="container mt-5">
-        <div className="row">
-            <div className="col-6">
+    return (
+        <div className="d-flex justify-content-around mt-5">
                 <button className="btn btn-lg btn-outline-primary"
                         onClick={() => props.changeMainPageAction("signIn")}>Sign In
                 </button>
-            </div>
-            <div className="col-6">
                 <button className="btn btn-lg btn-outline-primary"
                         onClick={() => props.changeMainPageAction("signUp")}>Sign Up
                 </button>
-            </div>
-        </div>
     </div>)
 
 

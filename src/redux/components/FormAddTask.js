@@ -5,31 +5,25 @@ import {connect} from "react-redux";
 
 const FormAddTask = (props) => {
 
-    const [state,setState]=useState({title:""});
+    const [state, setState] = useState({title: ""});
 
     const handlerSubmit = (event) => {
         event.preventDefault()
         props.addTaskAction(state)
-        setState({title:""})
+        setState({title: ""})
     };
-   const  handleChange=(event)=> {
-       setState(prevState => ({...prevState, ...{[event.target.name]: event.target.value}}))
+    const handleChange = (event) => {
+        setState(prevState => ({...prevState, ...{[event.target.name]: event.target.value}}))
     }
 
-
     return (<div>
-
-            <form onSubmit={handlerSubmit} className="d-flex ml-3">
-
-                <textarea type="text"  onChange={handleChange} name="title" value={state.title} cols="50" required/>
-                    <button type="submit" className="btn btn-lg btn-outline-primary m-1">add task to list</button>
-
-
-            </form>
-
+        <form onSubmit={handlerSubmit} className="d-flex justify-content-center">
+            <textarea type="text" onChange={handleChange} name="title" value={state.title} cols="50" required/>
+            <button type="submit" className="btn btn-lg btn-outline-primary m-1">add task to list</button>
+        </form>
     </div>)
 }
 const mapDispatchToProps = {
     addTaskAction
 }
-export default connect (null,mapDispatchToProps)(FormAddTask);
+export default connect(null, mapDispatchToProps)(FormAddTask);

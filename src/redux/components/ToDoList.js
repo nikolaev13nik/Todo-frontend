@@ -10,7 +10,6 @@ import FormAddTask from "./FormAddTask";
 const TodoList = (props) => {
 
     useEffect(() => {
-        console.log(props.tasks)
         setTasks(props.tasks)
     }, [props.tasks])
 
@@ -46,63 +45,71 @@ const TodoList = (props) => {
     if (props.kindSort) {
         handlerSort(props.kindSort)
     }
-    return (<div>
-            <div className="d-flex mt-3 justify-content-around border-bottom">
-                <div>
-                    <h1>You have {tasks.length} tasks.</h1>
-                </div>
-                <div>
-                    <button className="btn btn-lg  btn-danger"
-                            onClick={() => props.changeMainPageAction("")}
-                    >Sign out
-                    </button>
-                </div>
 
+
+    return (<div className="container-fluid">
+            <div className="row justify-content-center m-5">
+                <div className="col-12 border">
+
+                    <div className="d-flex mt-3 justify-content-around">
+                        <div>
+                            <h1>{props.authUser.name} you have {tasks.length} tasks</h1>
+                        </div>
+                        <div>
+                            <button className="btn btn-lg  btn-danger"
+                                    onClick={() => props.changeMainPageAction("")}
+                            >Sign out
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-12  mt-5">
+                    <div className="d-flex justify-content-around">
+                        <Dropdown>
+                            <Dropdown.Toggle variant="outline-primary" id="dropdown-basic">
+                                sort
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => handlerSort("desDateCreated")}>sort descending by creation
+                                    date</Dropdown.Item>
+                                <Dropdown.Item onClick={() => handlerSort("ascDateCreated")}>sort ascending by creation
+                                    date</Dropdown.Item>
+                                <Dropdown.Item onClick={() => handlerSort("desDateModified")}>sort descending by
+                                    modified
+                                    date</Dropdown.Item>
+                                <Dropdown.Item onClick={() => handlerSort("ascDateModified")}>sort ascending by modified
+                                    date</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        <div>
+                            <button className="btn btn-sm  btn-outline-primary"
+                                    onClick={() => props.clearTaskListAction()}>Clear list
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-12">
+                    <Table striped bordered hover className="col mt-1">
+                        <thead>
+                        <tr>
+                            <th>Created date</th>
+                            <th>Modified date</th>
+                            <th className="th-title">Title</th>
+                            <th>Done</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {tasks.map(task => <Task task={task} key={task.id}/>)}
+                        </tbody>
+                    </Table>
+                </div>
             </div>
-            <div className="d-flex justify-content-around">
-
-                <Dropdown>
-                    <Dropdown.Toggle variant="outline-primary" id="dropdown-basic">
-                        sort
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => handlerSort("desDateCreated")}>sort descending by creation
-                            date</Dropdown.Item>
-                        <Dropdown.Item onClick={() => handlerSort("ascDateCreated")}>sort ascending by creation
-                            date</Dropdown.Item>
-                        <Dropdown.Item onClick={() => handlerSort("desDateModified")}>sort descending by modified
-                            date</Dropdown.Item>
-                        <Dropdown.Item onClick={() => handlerSort("ascDateModified")}>sort ascending by modified
-                            date</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-                <div>
-                    <button className="btn btn-sm  btn-outline-primary"
-                            onClick={() => props.clearTaskListAction()}>Clear list
-                    </button>
-                </div>
-
-
+            <div className="col-12">
+                <FormAddTask/>
             </div>
 
 
-            <Table striped bordered hover className="col">
 
-                <thead>
-                <tr>
-                    <th>Created date</th>
-                    <th>Modified date</th>
-                    <th>Title</th>
-                    <th>Done</th>
-
-                </tr>
-                </thead>
-                <tbody>
-                {tasks.map(task => <Task task={task} key={task.id}/>)}
-                </tbody>
-
-            </Table>
-            <FormAddTask/>
         </div>
 
 
@@ -121,7 +128,8 @@ const mapDispatchToProps = {
 const mapStateToProps = (state) => {
     return {
         tasks: state.app.tasks,
-        kindSort: state.app.kindSort
+        kindSort: state.app.kindSort,
+        authUser: state.user.user
 
     }
 }

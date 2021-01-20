@@ -12,31 +12,34 @@ const SignUp = (props) => {
             login: e.target.login.value,
             password: e.target.password.value
         }
-        console.log(form)
         props.addUserAction(form)
     }
-    return (<div>
-            <form onSubmit={handlerOnSubmitForm} >
-                <label className="grey-text">
+    return (<div >
+            <form onSubmit={handlerOnSubmitForm} className="d-flex justify-content-center mt-5" >
+                <label className="grey-text mr-1">
                     Name
                     <input type="text" name="name" className="form-control" required/>
                 </label>
-                <label className="grey-text">
+                <label className="grey-text mr-1">
                      login / email
                     <input type="email" name="login" className="form-control" required/>
                 </label>
 
-                <br/>
-                <label className="grey-text">
+
+                <label className="grey-text mr-1">
                      password
                     <input type="password" name="password" className="form-control" required/>
                 </label>
                 <button type="submit" className="btn btn-outline-primary">Send</button>
             </form>
+
+        <div className="d-flex justify-content-center mt-2">
             <button onClick={() => {
                 props.changeMainPageAction("")
             }} type="button" className="btn btn-outline-primary">Back to start
             </button>
+        </div>
+
 
     </div>)
 }

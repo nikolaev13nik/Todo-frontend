@@ -1,4 +1,4 @@
-import {CHANGE_MAIN_PAGE, SAVE_ALL_TASKS, SAVE_KIND_SORT, SORT_TASKS} from "../actions/appAction";
+import {CHANGE_MAIN_PAGE, SAVE_ALL_TASKS, SAVE_KIND_SORT} from "../actions/appAction";
 
 const initialState = {
     tasks: [],
