@@ -22,8 +22,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Nik" />
         <option value="nik" />
+        <option value="Nik" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -101,7 +101,7 @@
       <workItem from="1610969995573" duration="2178000" />
       <workItem from="1610980933445" duration="39857000" />
       <workItem from="1611086788667" duration="3000" />
-      <workItem from="1611130749464" duration="6927000" />
+      <workItem from="1611130749464" duration="7206000" />
     </task>
     <task id="LOCAL-00001" summary="functional">
       <created>1611085080207</created>
@@ -117,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611141758307</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finish local host">
+      <created>1611142066808</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611142066808</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,11 +152,11 @@
     </state>
     <state x="1137" y="310" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2048.1073@0.23.2048.1073" timestamp="1611082649176" />
     <state x="1137" y="311" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2048.1076@0.23.2048.1076" timestamp="1610970841375" />
-    <state x="247" y="160" key="CommitChangelistDialog2" timestamp="1611141758084">
-      <screen x="0" y="23" width="2048" height="1068" />
+    <state x="247" y="160" key="CommitChangelistDialog2" timestamp="1611142066714">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state x="247" y="160" key="CommitChangelistDialog2/0.23.2048.1068@0.23.2048.1068" timestamp="1611141758084" />
-    <state x="247" y="160" key="CommitChangelistDialog2/0.23.2048.1073@0.23.2048.1073" timestamp="1611085079800" />
+    <state x="247" y="160" key="CommitChangelistDialog2/0.23.2048.1073@0.23.2048.1073" timestamp="1611142066714" />
     <state x="627" y="460" width="723" height="190" key="Github.ShareDialog" timestamp="1611140725466">
       <screen x="0" y="23" width="2048" height="1068" />
     </state>
@@ -195,11 +202,11 @@
     </state>
     <state x="264" y="194" key="SettingsEditor/0.23.2048.1068@0.23.2048.1068" timestamp="1611141690606" />
     <state x="264" y="195" key="SettingsEditor/0.23.2048.1073@0.23.2048.1073" timestamp="1611141846575" />
-    <state x="268" y="282" key="Vcs.Push.Dialog.v2" timestamp="1611141764870">
-      <screen x="0" y="23" width="2048" height="1068" />
+    <state x="268" y="283" key="Vcs.Push.Dialog.v2" timestamp="1611142073357">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state x="268" y="282" key="Vcs.Push.Dialog.v2/0.23.2048.1068@0.23.2048.1068" timestamp="1611141764870" />
-    <state x="268" y="283" key="Vcs.Push.Dialog.v2/0.23.2048.1073@0.23.2048.1073" timestamp="1611085111494" />
+    <state x="268" y="283" key="Vcs.Push.Dialog.v2/0.23.2048.1073@0.23.2048.1073" timestamp="1611142073357" />
     <state x="546" y="480" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611141562011">
       <screen x="0" y="23" width="2048" height="1068" />
     </state>
