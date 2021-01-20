@@ -1,7 +1,10 @@
 import React from "react"
 import {connect} from "react-redux";
-import {changeMainPageAction} from "../actions/appAction";
-import {loginAction} from "../actions/userAction";
+
+import {loginAction} from "../redux/actions/userAction";
+import {changeMainPageAction} from "../redux/actions/appAction";
+
+
 
 const SignIn=(props)=>{
 

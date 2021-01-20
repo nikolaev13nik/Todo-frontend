@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 
-import {addTaskAction} from "../actions/appAction";
 import {connect} from "react-redux";
+import {addTaskAction} from "../redux/actions/appAction";
 
 const FormAddTask = (props) => {
 

@@ -1,6 +1,7 @@
 import React from "react"
-import Header from "./redux/components/Header";
-import Main from "./redux/components/Main";
+import Header from "./components/Header";
+import Main from "./components/Main";
+
 
 
 function App() {

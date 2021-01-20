@@ -1,7 +1,8 @@
 import React from "react"
-import {changeMainPageAction} from "../actions/appAction";
-import {addUserAction} from "../actions/userAction";
 import {connect} from "react-redux";
+import {changeMainPageAction} from "../redux/actions/appAction";
+import {addUserAction} from "../redux/actions/userAction";
+
 
 const SignUp = (props) => {
 

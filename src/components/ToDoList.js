@@ -1,11 +1,16 @@
 import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
-import {changeMainPageAction, clearTaskListAction, saveKindSortAction, saveTasksAction} from "../actions/appAction";
-import {loginAction, saveUserToStoreAction} from "../actions/userAction";
 import Task from "./Task";
 import Table from 'react-bootstrap/Table';
 import {Dropdown} from "react-bootstrap";
 import FormAddTask from "./FormAddTask";
+import {
+    changeMainPageAction,
+    clearTaskListAction,
+    saveKindSortAction,
+    saveTasksAction
+} from "../redux/actions/appAction";
+import {loginAction, saveUserToStoreAction} from "../redux/actions/userAction";
 
 const TodoList = (props) => {
 

@@ -1,6 +1,7 @@
 import {encoderBase64, upgradeDateForSort} from "../../utils/util";
 import {URI_ADD_TASK, URI_DELETE_TASK, URI_EDIT_TASK, URI_REMOVE_ALL_TASKS} from "../../utils/configuration";
 
+
 export const SAVE_ALL_TASKS = "APP/SAVE_ALL_TASKS";
 export const CHANGE_MAIN_PAGE = "APP/CHANGE_MAIN_PAGE";
 

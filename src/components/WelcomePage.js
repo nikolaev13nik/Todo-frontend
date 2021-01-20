@@ -1,6 +1,7 @@
-import {changeMainPageAction} from "../actions/appAction";
+
 import React from "react";
 import {connect} from "react-redux";
+import {changeMainPageAction} from "../redux/actions/appAction";
 
 
 const WelcomePage = (props) => {

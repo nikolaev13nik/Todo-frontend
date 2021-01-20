@@ -1,8 +1,8 @@
 import React, {useState} from "react"
-import { deleteTaskAction, editTaskAction} from "../actions/appAction";
 import {Dropdown} from "react-bootstrap";
 import {connect} from "react-redux";
 import Collapse from "react-bootstrap/Collapse";
+import {deleteTaskAction, editTaskAction} from "../redux/actions/appAction";
 
 const Task = (props) => {
 
