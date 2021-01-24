@@ -6,8 +6,8 @@ import {deleteTaskAction, editTaskAction} from "../redux/actions/appAction";
 
 const Task = (props) => {
 
-    let createdDate = new Date(props.task.createdDate).toLocaleString("en-GB",{ timeZone: 'Asia/Jerusalem' })
-    let modifiedDate = new Date(props.task.modifiedDate).toLocaleString("en-GB",{ timeZone: 'Asia/Jerusalem' })
+    let createdDate = new Date(props.task.createdDate).toLocaleString("en-GB")
+    let modifiedDate = new Date(props.task.modifiedDate).toLocaleString("en-GB")
 
     const [open, setOpen] = useState(false);
     const [state, setState] = useState({title: props.task.title});
@@ -30,7 +30,7 @@ const Task = (props) => {
 
 
     let isDone = props.task.isDone ? "Done" : props.task.isDone
-
+    console.log(createdDate)
     return (<>
             <tr>
                 <td>
